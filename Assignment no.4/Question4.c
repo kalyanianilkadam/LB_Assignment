@@ -1,0 +1,53 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files 
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : SumNonFact
+//  Description :   It is used to display Sum Of Non Factors
+//  Input :         int , int
+//  Output :        int
+//  Author :        Kalyani Anil Kadam.
+//  Date :          26/10/2025
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+int SumNonFact(int iNo)
+{
+    int iCnt = 0,iSum = 0;
+
+    for(iCnt = 1; iCnt< iNo; iCnt++)
+    {
+        if((iNo % iCnt)!= 0)
+        {
+            iSum = iSum + iCnt;
+        }
+    }
+    return iSum;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function For the Application 
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter Number:");
+    scanf("%d",&iValue);
+
+    iRet = SumNonFact(iValue);
+
+    printf("%d",iRet);
+
+    return 0;
+}
