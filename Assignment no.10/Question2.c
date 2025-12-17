@@ -1,0 +1,48 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files 
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : RectArea
+//  Description :   It is used to Display Area of rectangle
+//  Input :         float, float
+//  Output :        double
+//  Author :        Kalyani Anil Kadam.
+//  Date :          26/10/2025
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+double RectArea(float fWidth, float fHeight)
+{
+    double dRArea;
+    dRArea = fWidth * fHeight;
+    return dRArea;
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function For the Application 
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    float fValue1 = 0.0, fValue2 = 0.0;
+    double dRet = 0.0;
+
+    printf("enter width:");
+    scanf("%f", &fValue1);
+
+    printf("enter height:");
+    scanf("%f", &fValue2);
+
+    dRet = RectArea(fValue1, fValue2);
+
+    printf("Area of rectangle is:%f",dRet);
+}
