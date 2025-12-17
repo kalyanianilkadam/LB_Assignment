@@ -1,0 +1,57 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files 
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : DisplayFactors
+//  Description :   It is used to display Factors
+//  Input :         int
+//  Output :        int
+//  Author :        Kalyani Anil Kadam.
+//  Date :          26/10/2025
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+void DisplayFactor(int iNo)
+{
+    int i = 0;
+
+    if(iNo <=0)
+    {
+        iNo = -iNo;
+    }
+    for(i = 1; i<=iNo; i++)
+    {
+        if((iNo %i)==0)
+        {
+             if((i%2)== 0)
+                {
+                     printf("%d\t",i);
+                }
+         }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function For the Application 
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue =0;
+
+    printf("Enter Number:");
+    scanf("%d",&iValue);
+
+    DisplayFactor(iValue);
+
+
+    return 0;
+}
