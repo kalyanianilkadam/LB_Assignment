@@ -1,0 +1,55 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files 
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : count
+//  Description :   It is used to display digits
+//  Input :         int 
+//  Output :        int 
+//  Author :        Kalyani Anil Kadam.
+//  Date :          27/10/2025
+//
+////////////////////////////////////////////////////////////////////////////
+
+int Count(int iNo)
+{
+    int iDigit = 0;
+    int iCnt = 0;
+
+    while(iNo != 0)
+    {
+        iDigit = iNo % 10;
+        if(iDigit < 6)
+        {
+            iCnt++;
+        }
+        iNo = iNo / 10;
+    }
+    return iCnt;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function For the Application 
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter number: ");
+    scanf("%d",&iValue);
+
+    iRet = Count(iValue);
+    printf("%d", iRet);
+
+    return 0;
+}
