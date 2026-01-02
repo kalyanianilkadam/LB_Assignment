@@ -1,0 +1,49 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files 
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : count_factors
+//  Description :   It is used to display Count factors
+//  Input :         int 
+//  Output :        int 
+//  Author :        Kalyani Anil Kadam.
+//  Date :          27/10/2025
+//
+//////////////////////////////////////////////////////////////////////////////
+
+int count_factors(int number)
+{
+    int i = 0;
+    int count = 0;
+    for (i = 1; i <= number; i++)
+    {
+        if (number % i == 0)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function For the Application 
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int number;
+    printf("Enter number: ");
+    scanf("%d", &number);
+
+    printf("Total factors of %d are: %d\n", number, count_factors(number));
+
+    return 0;
+}
