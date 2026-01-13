@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files 
+//
+///////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : CountSmall
+//  Description :   It is used to display Small character
+//  Input :         char
+//  Output :        char
+//  Author :        Kalyani Anil Kadam.
+//  Date :          16/12/2025
+//
+//////////////////////////////////////////////////////////////////////////////
+
+int CountSmall(char *str)
+{
+    int iCnt = 0;
+
+    while(*str != '\0')
+    {
+
+        if(*str >= 'a' && *str <= 'z')
+        {
+            iCnt++;
+        }
+        str++;
+    }
+    return iCnt;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function For the Application 
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char arr[20];
+    int iRet = 0;
+
+    printf("Enter string: ");
+    scanf("%[^'\n']s", arr);
+
+    iRet = CountSmall(arr);
+
+    printf("%d", iRet);
+
+    return 0;
+}
